@@ -23,7 +23,7 @@ void NulConvert(FILE *pfIn, FILE *pfOut, enum STATE *psta)
 		{
 		case '*':              // 读取到/*  进入c格式
 			fputc('/', pfOut);
-			fputc('/', pfOut);
+			fputc('*', pfOut);
 			*psta = C_STATE;
 			break;
 		case '/':             //  读取到//   进入c++ 模式
